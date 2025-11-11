@@ -4,12 +4,9 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
-import net.minecraft.item.Items;
-import net.minecraft.item.ToolMaterials;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Rarity;
 import silly.chemthunder.ozone.impl.Ozone;
 import silly.chemthunder.ozone.impl.item.TestItem;
 
@@ -24,7 +21,6 @@ public interface OzoneItems {
     Item TEST_ITEM = create("test_item", new TestItem(new Item.Settings()
             .maxCount(1)
             .fireproof()
-            .rarity(Rarity.UNCOMMON)
     ));
 
 
