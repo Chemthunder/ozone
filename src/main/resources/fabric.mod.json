@@ -12,7 +12,7 @@
 		"sources": "https://github.com/Chemthunder/ozone"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/ozone/icon.png",
+	"icon": "assets/ozone/ozone_icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [

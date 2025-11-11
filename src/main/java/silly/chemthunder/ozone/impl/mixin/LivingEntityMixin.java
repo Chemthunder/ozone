@@ -9,7 +9,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
@@ -46,10 +45,5 @@ public abstract class LivingEntityMixin extends Entity implements Attackable {
         } else {
             original.call(instance, source, amount);
         }
-    }
-
-    @WrapOperation(method = "damage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;playSound(Lnet/minecraft/sound/SoundEvent;FF)V"))
-    private void ozone$customHitSound(LivingEntity instance, SoundEvent soundEvent, float v, float v, Operation<Void> original) {
-
     }
 }

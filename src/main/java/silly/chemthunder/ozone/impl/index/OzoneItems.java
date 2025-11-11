@@ -29,7 +29,6 @@ public interface OzoneItems {
             .fireproof()
     ));
 
-
     static <T extends Item> T create(String name, T item) {
         ITEMS.put(item, Ozone.id(name));
         return item;
