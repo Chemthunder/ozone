@@ -3,6 +3,8 @@
   "package": "silly.chemthunder.ozone.impl.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "EndPortalBlockMixin",
+    "LivingEntityMixin",
     "PlayerEntityMixin"
   ],
   "injectors": {

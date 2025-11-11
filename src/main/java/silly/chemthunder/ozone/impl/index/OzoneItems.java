@@ -8,6 +8,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import silly.chemthunder.ozone.impl.Ozone;
+import silly.chemthunder.ozone.impl.item.CustomKillItem;
 import silly.chemthunder.ozone.impl.item.TestItem;
 
 import java.util.LinkedHashMap;
@@ -19,6 +20,11 @@ public interface OzoneItems {
     //  Item WEAPON_RACK = create("weapon_rack", new WeaponRackItem(new Item.Settings()));
 
     Item TEST_ITEM = create("test_item", new TestItem(new Item.Settings()
+            .maxCount(1)
+            .fireproof()
+    ));
+
+    Item CUSTOM_KILL_ITEM = create("custom_kill_item", new CustomKillItem(new Item.Settings()
             .maxCount(1)
             .fireproof()
     ));
@@ -36,5 +42,6 @@ public interface OzoneItems {
 
     private static void addCombatEntries(FabricItemGroupEntries fabricItemGroupEntries) {
         fabricItemGroupEntries.add(TEST_ITEM);
+        fabricItemGroupEntries.add(CUSTOM_KILL_ITEM);
     }
 }

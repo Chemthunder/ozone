@@ -1,4 +1,4 @@
-package silly.chemthunder.ozone.api.item;
+package silly.chemthunder.ozone.api.thingies;
 
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.player.PlayerEntity;
