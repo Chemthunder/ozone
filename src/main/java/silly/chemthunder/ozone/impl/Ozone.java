@@ -22,6 +22,5 @@ public class Ozone implements ModInitializer {
             OzoneItems.initialize();
         }
         MidnightConfig.init(MOD_ID, OzoneConfig.class);
-		LOGGER.info("Hello Fabric world!");
 	}
 }

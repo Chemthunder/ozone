@@ -6,5 +6,5 @@ public class OzoneConfig extends MidnightConfig {
     private static final String config = "config";
 
     @Entry(category = config)
-    public static boolean disableEndPortals = true;
+    public static boolean disableEndPortals = false;
 }

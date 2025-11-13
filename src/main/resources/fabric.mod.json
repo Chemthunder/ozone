@@ -3,12 +3,12 @@
 	"id": "ozone",
 	"version": "${version}",
 	"name": "Ozone",
-	"description": "A silly little library I use for my mods on older versions!",
+	"description": "A common code library and some examples I commonly use in my older mods.",
 	"authors": [
 		"Chemthunder"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
+		"homepage": "",
 		"sources": "https://github.com/Chemthunder/ozone"
 	},
 	"license": "CC0-1.0",

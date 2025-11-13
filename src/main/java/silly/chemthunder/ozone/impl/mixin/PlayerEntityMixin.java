@@ -19,11 +19,6 @@ import silly.chemthunder.ozone.api.thingies.CustomCritEffectItem;
 
 @Mixin(PlayerEntity.class)
 public abstract class PlayerEntityMixin extends LivingEntity {
-
-    @Shadow
-    @Final
-    private PlayerInventory inventory;
-
     protected PlayerEntityMixin(EntityType<? extends LivingEntity> entityType, World world) {
         super(entityType, world);
     }
