@@ -33,5 +33,3 @@ public class TestItem extends Item implements CustomBipedEntityModelPoseItem, Cu
         return super.getName(stack).copy().styled(style -> style.withColor(0xeb4034));
     }
 }
-
-// 0xeb4034
