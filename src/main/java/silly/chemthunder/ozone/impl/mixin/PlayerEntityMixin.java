@@ -12,6 +12,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import silly.chemthunder.ozone.api.thingies.CustomCritEffectItem;
+import silly.chemthunder.ozone.api.thingies.CustomHitSoundItem;
 
 @Mixin(PlayerEntity.class)
 public abstract class PlayerEntityMixin extends LivingEntity {
@@ -27,6 +28,18 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         if (target instanceof LivingEntity livingEntity) {
             if (stack.getItem() instanceof CustomCritEffectItem critEffectItem) {
                 critEffectItem.critEffect(stack, world, this, livingEntity);
+            }
+        }
+    }
+
+    @Inject(method = "attack", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerEntity;getAttackCooldownProgress(F)F"))
+    private void ozone$customHitSound(Entity target, CallbackInfo ci) {
+        PlayerEntity player = (PlayerEntity) (Object) this;
+        if (player.getAttackCooldownProgress(0.5F) > 0.9F) {
+            ItemStack stack = player.getMainHandStack();
+
+            if (stack.getItem() instanceof CustomHitSoundItem sound) {
+                sound.getHitSound(stack, player);
             }
         }
     }
